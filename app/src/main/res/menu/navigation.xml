@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@mipmap/ic_launcher"
+        android:title="首页"/>
+
+    <item
+        android:id="@+id/navigation_todo"
+        android:icon="@mipmap/ic_launcher"
+        android:title="客户" />
+
+    <item
+        android:id="@+id/navigation_customer"
+        android:icon="@mipmap/ic_launcher"
+        android:title="贷前" />
+
+    <item
+        android:id="@+id/navigation_loan"
+        android:icon="@mipmap/ic_launcher"
+        android:title="贷后" />
+
+    <item
+        android:id="@+id/navigation_prequalification"
+        android:icon="@mipmap/ic_launcher"
+        android:title="报表" />
+
+</menu>

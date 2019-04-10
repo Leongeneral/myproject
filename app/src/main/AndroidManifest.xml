@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.auto.chishan.manager">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <!-- 拍照权限 允许访问摄像头进行拍照 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 读取外部存储的权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <application
+        android:name="com.my.commonlibrary.base.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_emtry"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon_emtry"
+        android:supportsRtl="true"
+        android:theme="@style/AppBaseTheme">
+        <activity android:name="com.auto.chishan.manager.ui.LoginActivity"
+                  android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.auto.chishan.manager.ui.customer.AddCustomerActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.auto.chishan.manager.ui.customer.ImageDataActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.auto.chishan.manager.ui.customer.UploadImageActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.auto.chishan.manager.ui.customer.CustomerListActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.auto.chishan.manager.ui.home.ExpirationReminderActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.auto.chishan.manager.ui.home.ProjectDetailExpireActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.auto.chishan.manager.ui.MainActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.auto.chishan.manager.ui.project.ProjectManageActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.auto.chishan.manager.ui.project.ProjectDetailActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.auto.chishan.manager.ui.project.ContractManageActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.auto.chishan.manager.ui.project.ContractMaintainActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.auto.chishan.manager.ui.project.ContractLookActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.auto.chishan.manager.ui.project.AddContractActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.auto.chishan.manager.ui.project.UnderwriteManageActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.auto.chishan.manager.ui.project.UnderWriteMaintainActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.auto.chishan.manager.ui.project.UnderwriteLookActivity"
+                  android:screenOrientation="portrait"/>
+
+        <!--查看选中的图片-->
+        <activity
+            android:name="com.auto.chishan.manager.ui.customer.ImagePreviewDelActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.auto.chishan.manager.ui.afterloan.AfterloanVisitActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.auto.chishan.manager.ui.afterloan.VisitRecordListActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.auto.chishan.manager.ui.afterloan.VisitAddRecordActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.auto.chishan.manager.ui.afterloan.VisitRecordDetailActivity"
+            android:label="回访详情"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.auto.chishan.manager.ui.project.FindUserActivity"
+            ></activity>
+        <activity android:name="com.auto.chishan.manager.ui.SettingActivity"
+            android:label="设置"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.auto.chishan.manager.ui.MyInstallmentActivity"
+            android:label="我的分期"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.auto.chishan.manager.ui.MyBankcardActivity"
+            android:label="我的分期"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.auto.chishan.manager.ui.AddBankCardActivity"
+            android:label="添加银行卡"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.auto.chishan.manager.ui.InstallmentPlainActivity"
+            android:label="分期计划"
+            android:screenOrientation="portrait"/>
+
+
+
+        <activity android:name="com.auto.chishan.manager.ui.RefoundActivity"
+            android:label="添加银行卡"
+            android:screenOrientation="portrait"/>
+
+    </application>
+
+</manifest>

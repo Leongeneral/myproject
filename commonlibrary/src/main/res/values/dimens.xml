@@ -1,0 +1,17 @@
+<resources>
+
+    <dimen name="titlecontentsize">18sp</dimen>  <!--标题字体大小  -->
+    <dimen name="titleheight">40dp</dimen>       <!--标题高度  -->
+    <dimen name="size16">18sp</dimen>    <!--一般字体大小  -->
+    <dimen name="padding10">10dp</dimen>    <!--一般字体大小  -->
+    <dimen name="itemHeight">35dp</dimen>    <!--一一般item的高度 如库存查询出来的结果  -->
+    <dimen name="normaltvsize">15sp</dimen>    <!--一般字体大小  -->
+    <dimen name="sp_16">16sp</dimen>
+    <dimen name="dp_10">10dp</dimen>
+    <dimen name="dp_20">20dp</dimen>
+    <dimen name="dp_30">30dp</dimen>
+    <dimen name="corner_radius">12dp</dimen>
+    <dimen name="sp12">12sp</dimen>
+    <dimen name="sp13">13sp</dimen>
+    <dimen name="sp14">14sp</dimen>
+</resources>

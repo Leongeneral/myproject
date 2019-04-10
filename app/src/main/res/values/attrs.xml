@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 手势密码 -->
+    <declare-styleable name="lock_view">
+        <attr name = "nomal_view" format="reference"></attr>
+        <attr name = "pressed_view" format="reference"></attr>
+    </declare-styleable>
+    <!-- 进度条 -->
+    <declare-styleable name="SmoothProgressBar">
+        <attr name="spbStyle" format="reference"/>
+        <attr name="spb_color" format="color"/>
+        <attr name="spb_stroke_width" format="dimension"/>
+        <attr name="spb_stroke_separator_length" format="dimension"/>
+        <attr name="spb_sections_count" format="integer"/>
+        <attr name="spb_speed" format="float"/>
+        <attr name="spb_progressiveStart_speed" format="float"/>
+        <attr name="spb_progressiveStop_speed" format="float"/>
+        <attr name="spb_interpolator" format="enum">
+            <enum name="spb_interpolator_accelerate" value="0"/>
+            <enum name="spb_interpolator_linear" value="1"/>
+            <enum name="spb_interpolator_acceleratedecelerate" value="2"/>
+            <enum name="spb_interpolator_decelerate" value="3"/>
+        </attr>
+        <attr name="spb_reversed" format="boolean"/>
+        <attr name="spb_mirror_mode" format="boolean"/>
+        <attr name="spb_colors" format="reference"/>
+        <attr name="spb_progressiveStart_activated" format="boolean"/>
+        <attr name="spb_background" format="reference"/>
+        <attr name="spb_generate_background_with_colors" format="boolean"/>
+        <attr name="spb_gradients" format="boolean"/>
+    </declare-styleable>
+    <!-- 列表选项 style -->
+    <declare-styleable name="item_view">
+        <!-- 名称 -->
+        <attr name="itemTitle" format="string"/>
+        <!-- 简述 -->
+        <attr name="itemInfo" format="string"/>
+        <!-- 图标 -->
+        <attr name="itemIcon" format="reference"/>
+        <!-- 选项的展示类型 -->
+        <attr name="itemType" format="string"/>
+        <!-- 图标描述 -->
+        <attr name="itemIconInfo" format="string"/>
+        <!-- 横线颜色 -->
+        <attr name="lineColor"  format="color"/>
+        <!-- 横线是否显示 -->
+        <attr name="lineShow"   format="boolean"/>
+    </declare-styleable>
+
+    <!-- 圆形头像 -->
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+    <!-- 图片裁剪 -->
+    <declare-styleable name="CropImageView">
+        <attr name="guidelines">
+            <enum name="on" value="2"/>
+            <enum name="onTouch" value="1"/>
+            <enum name="off" value="0"/>
+        </attr>
+        <attr name="fixAspectRatio" format="boolean"/>
+        <attr name="aspectRatioX" format="integer"/>
+        <attr name="aspectRatioY" format= "integer"/>
+        <attr name="imageResource" format="reference"/>
+        <attr name="disappear" format="boolean"/>
+    </declare-styleable>
+    <!-- 波动变化的‘.’ -->
+    <declare-styleable name="WaitingDots">
+        <attr name="dotsColor" format="color" />
+        <attr name="period" format="integer" />
+        <attr name="jumpHeight" format="integer" />
+        <attr name="autoplay" format="boolean" />
+    </declare-styleable>
+    <!-- 图片缩放 -->
+    <declare-styleable name="SubsamplingScaleImageView">
+        <attr name="src" format="reference"/>
+        <attr name="assetName" format="string"/>
+        <attr name="panEnabled" format="boolean"/>
+        <attr name="zoomEnabled" format="boolean"/>
+        <attr name="quickScaleEnabled" format="boolean"/>
+        <attr name="tileBackgroundColor" format="color"/>
+    </declare-styleable>
+    <!-- 弧形进度条 -->
+    <declare-styleable name="ColorArcProgressBar">
+        <attr name="back_color" format="color"/>
+        <attr name="front_color1" format="color"/>
+        <attr name="front_color2" format="color"/>
+        <attr name="front_color3" format="color"/>
+        <attr name="back_width" format="dimension"/>
+        <attr name="front_width" format="dimension"/>
+        <attr name="is_need_title" format="boolean"/>
+        <attr name="is_need_content" format="boolean"/>
+        <attr name="is_need_unit" format="boolean"/>
+        <attr name="is_need_dial" format="boolean"/>
+        <attr name="string_title" format="string"/>
+        <attr name="string_unit" format="string"/>
+        <attr name="total_engle" format="integer"/>
+        <attr name="current_value" format="float"/>
+        <attr name="max_value" format="float"/>
+
+    </declare-styleable>
+    <!-- 滑动控件 -->
+    <declare-styleable name="SwipeLayout">
+        <attr name="drag_edge">
+            <flag name="left" value="1" />
+            <flag name="right" value="2" />
+            <flag name="top" value="4" />
+            <flag name="bottom" value="8" />
+        </attr>
+        <attr name="leftEdgeSwipeOffset" format="dimension" />
+        <attr name="rightEdgeSwipeOffset" format="dimension" />
+        <attr name="topEdgeSwipeOffset" format="dimension" />
+        <attr name="bottomEdgeSwipeOffset" format="dimension" />
+        <attr name="show_mode" format="enum">
+            <enum name="lay_down" value="0" />
+            <enum name="pull_out" value="1" />
+        </attr>
+        <attr name="clickToClose" format="boolean" />
+    </declare-styleable>
+
+    <!-- 用户信息item -->
+    <declare-styleable name="UserInfoItem">
+        <attr name="dataTitle" format="string" />
+    </declare-styleable>
+
+    <!-- 定义自定义属性 -->
+    <attr name="line_color" format="color"/>
+    <attr name="line_height" format="dimension"/>
+    <!-- 声明自定义属性 -->
+    <declare-styleable name="edittext_bg">
+        <attr name="line_color"/>
+        <attr name="line_height"/>
+        <attr name="line_type" format="boolean"/>
+    </declare-styleable>
+
+    <!--自定义带数字的进度条-->
+    <declare-styleable name="NumberProgressBar">
+        <!--进度条的当前进度值-->
+        <attr name="progress_current" format="integer"/>
+        <!--进度条的最大进度值-->
+        <attr name="progress_max" format="integer"/>
+
+        <!--当前进度值文本之后的进度条颜色-->
+        <attr name="progress_unreached_color" format="color"/>
+        <!--当前进度值文本之前的进度条颜色-->
+        <attr name="progress_reached_color" format="color"/>
+
+        <!-- 当前进度值文本之前的进度条的高度-->
+        <attr name="progress_reached_bar_height" format="dimension"/>
+        <!--当前进度值文本之后的进度条的高度-->
+        <attr name="progress_unreached_bar_height" format="dimension"/>
+
+        <!--当前进度值文本的字体大小-->
+        <attr name="progress_text_size" format="dimension"/>
+        <!--当前进度值文本的颜色-->
+        <attr name="progress_text_color" format="color"/>
+        <!--当前进度值之前文本的间距-->
+        <attr name="progress_text_offset" format="dimension"/>
+
+        <!--当前进度值文本是否可见-->
+        <attr name="progress_text_visibility" format="enum">
+            <enum name="visible" value="0"/>
+            <enum name="invisible" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="Themes">
+        <attr name="numberProgressBarStyle" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="pickerview">
+        <attr name="pickerview_gravity">
+            <enum name="center" value="17"/>
+            <enum name="left" value="3"/>
+            <enum name="right" value="5"/>
+        </attr>
+        <attr name="pickerview_textSize" format="dimension"/>
+        <attr name="pickerview_textColorOut" format="color"/>
+        <attr name="pickerview_textColorCenter" format="color"/>
+        <attr name="pickerview_dividerColor" format="color"/>
+        <attr name="pickerview_lineSpacingMultiplier" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="OcrCropView">
+        <attr name="civMaskAlpha" format="integer"/>
+        <attr name="civShowGuideLine" format="boolean"/>
+        <attr name="civLineColor" format="color"/>
+        <attr name="civLineWidth" format="dimension"/>
+        <attr name="civShowMagnifier" format="boolean"/>
+        <attr name="civMagnifierCrossColor" format="color"/>
+        <attr name="civGuideLineWidth" format="dimension"/>
+        <attr name="civGuideLineColor" format="color"/>
+        <attr name="civPointFillColor" format="color"/>
+        <attr name="civPointFillAlpha" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="JCameraView">
+        <attr name="iconSize"/>
+        <attr name="iconMargin"/>
+        <attr name="iconSrc"/>
+        <attr name="iconLeft"/>
+        <attr name="iconRight"/>
+        <attr name="duration_max"/>
+    </declare-styleable>
+
+    <declare-styleable name="CameraLine_Attrs">
+        <attr name="lineIsWide" format="boolean"/>
+        <attr name="lineCrossLength" format="dimension"/>
+        <attr name="cameraLineColor" format="color"/>
+        <attr name="lineWidth" format="dimension"/>
+        <attr name="lineCrossWidth" format="dimension"/>
+        <attr name="lineCrossColor" format="color"/>
+        <attr name="lineIsShow" format="boolean"/>
+    </declare-styleable>
+</resources>

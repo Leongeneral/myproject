@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/light_gray"
+              android:paddingBottom="30dp"
+              android:orientation="vertical">
+
+    <include
+        layout="@layout/titlebar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="20dp">
+
+        <TextView
+            style="@style/style_tv_15_black"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="合同名称"/>
+
+        <EditText
+            android:id="@+id/contractNameEt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:singleLine="true"
+            android:background="@null"
+            android:gravity="center_vertical|right"
+            android:hint="请输入名称"
+            android:textColor="@color/black"
+            android:textSize="15sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="20dp">
+
+        <TextView
+            style="@style/style_tv_15_black"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="合同正文"/>
+
+        <EditText
+            android:id="@+id/contractTxtEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@null"
+            android:gravity="center_vertical|right"
+            android:hint="请输入正文"
+            android:textColor="@color/black"
+            android:textSize="15sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="20dp">
+
+        <TextView
+            style="@style/style_tv_15_black"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="合同编号"/>
+
+        <EditText
+            android:id="@+id/contractNoEt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:singleLine="true"
+            android:background="@null"
+            android:gravity="center_vertical|right"
+            android:hint="请输入编号"
+            android:textColor="@color/black"
+            android:textSize="15sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="20dp">
+
+        <TextView
+            style="@style/style_tv_15_black"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="合同数量"/>
+
+        <EditText
+            android:id="@+id/contractNumEt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:background="@null"
+            android:gravity="center_vertical|right"
+            android:hint="请输入数量"
+            android:singleLine="true"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+    <include
+        layout="@layout/include_savebtn"/>
+</LinearLayout>

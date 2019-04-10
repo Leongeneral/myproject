@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/busiCodeTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/traceTv"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:minWidth="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bg_green_rectangles"
+            android:gravity="center"
+            android:text="跟踪"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/sendTv"
+            android:layout_width="45dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/traceTv"
+            android:background="@drawable/bg_blue_rectangles"
+            android:gravity="center"
+            android:text="发送"
+            android:textColor="@color/white"/>
+
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/view_horizontalline"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv1"
+            style="@style/style_tv_14_gray"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="客户名称"
+            />
+
+        <TextView
+            android:id="@+id/customerNameTv"
+            style="@style/style_tv_14_black"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/tv1"
+            android:layout_marginRight="10dp"
+            android:text="王龙飞"
+            />
+
+        <TextView
+            android:id="@+id/tv2"
+            style="@style/style_tv_14_gray"
+            android:layout_below="@id/tv1"
+            android:layout_marginLeft="10dp"
+            android:text="项目名称"
+            />
+
+        <TextView
+            android:id="@+id/projectNameTv"
+            style="@style/style_tv_14_black"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/tv2"
+            android:layout_marginLeft="120dp"
+            android:layout_marginRight="10dp"
+            android:singleLine="true"
+            android:text="kljaf项目"
+            />
+
+        <TextView
+            android:id="@+id/tv3"
+            style="@style/style_tv_14_gray"
+            android:layout_below="@id/tv2"
+            android:layout_marginLeft="10dp"
+            android:text="项目金额(元)"
+            />
+
+        <TextView
+            android:id="@+id/financingAmountTv"
+            style="@style/style_tv_14_black"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/tv3"
+            android:layout_marginRight="10dp"
+            android:text="典当"
+            />
+
+        <TextView
+            android:id="@+id/rateTitleTv"
+            style="@style/style_tv_14_gray"
+            android:layout_below="@id/tv3"
+            android:layout_marginLeft="10dp"
+            android:text="年利率(%)"
+            />
+
+        <TextView
+            android:id="@+id/interestRateTv"
+            style="@style/style_tv_14_black"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/rateTitleTv"
+            android:layout_marginRight="10dp"
+            android:text="2019-03-13"
+            />
+
+        <TextView
+            android:id="@+id/tv5"
+            style="@style/style_tv_14_gray"
+            android:layout_below="@id/rateTitleTv"
+            android:layout_marginLeft="10dp"
+            android:text="融资期限(月)"
+            />
+
+        <TextView
+            android:id="@+id/timeLimitTv"
+            style="@style/style_tv_14_black"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/tv5"
+            android:layout_marginRight="10dp"
+            android:text="本息逾期"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="#f2f2f2">
+
+        <TextView
+            android:id="@+id/productNameTv"
+            style="@style/style_tv_14_gray"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="产品类型：房产非标典当"
+            android:textSize="12sp"
+            />
+
+        <TextView
+            android:id="@+id/auditStateTv"
+            style="@style/style_tv_14_gray"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="状态：核保审核通过"
+            android:textSize="12sp"
+            />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">凤凰湖</string>
+    <string name="bottom_bervaior">cn.white.ymc.wanandroidmaster.util.behavior.BottomNavigationBehavior</string>
+
+    <string-array name="busyType">
+        <item>典当</item>
+        <item>担保</item>
+    </string-array>
+</resources>

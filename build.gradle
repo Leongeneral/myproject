@@ -1,0 +1,36 @@
+apply from: "conf.gradle"
+buildscript {
+
+    repositories {
+        //新加
+        mavenCentral()
+        jcenter()
+        //新加
+        mavenLocal()
+        google()
+        maven { url 'https://maven.google.com' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.5.1'
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url "https://jitpack.io" }
+
+        //新加
+        mavenCentral()
+        jcenter()
+        //新加
+        mavenLocal()
+        google()
+        maven { url 'https://maven.google.com' }
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

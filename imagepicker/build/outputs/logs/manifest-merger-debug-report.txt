@@ -1,0 +1,85 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:2:1-33:12
+	package
+		ADDED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:3:5-34
+		INJECTED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml
+		INJECTED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml
+		ADDED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:2:1-33:12
+		INJECTED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml
+		ADDED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:2:1-33:12
+		INJECTED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:4:5-63
+uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+ADDED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:7:5-85
+	android:name
+		ADDED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:7:22-83
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:9:5-80
+	android:name
+		ADDED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:9:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:11:5-79
+	android:name
+		ADDED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:11:22-77
+uses-permission#android.permission.CAMERA
+ADDED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:13:5-64
+	android:name
+		ADDED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:13:22-62
+application
+ADDED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:15:5-31:19
+activity#com.lzy.imagepicker.ui.ImageBaseActivity
+ADDED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:16:9-57
+	android:name
+		ADDED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:16:19-55
+activity#com.lzy.imagepicker.ui.ImageGridActivity
+ADDED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:17:9-20:54
+	android:configChanges
+		ADDED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:19:13-59
+	android:theme
+		ADDED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:20:13-52
+	android:name
+		ADDED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:18:13-49
+activity#com.lzy.imagepicker.ui.ImageCropActivity
+ADDED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:21:9-25:54
+	android:hardwareAccelerated
+		ADDED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:24:13-48
+	android:configChanges
+		ADDED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:23:13-59
+	android:theme
+		ADDED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:25:13-52
+	android:name
+		ADDED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:22:13-49
+activity#com.lzy.imagepicker.ui.ImagePreviewActivity
+ADDED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:26:9-29:64
+	android:configChanges
+		ADDED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:28:13-59
+	android:theme
+		ADDED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:29:13-62
+	android:name
+		ADDED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml:27:13-52
+uses-sdk
+INJECTED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml
+INJECTED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml
+INJECTED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml
+INJECTED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml
+		ADDED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml
+		INJECTED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml
+		ADDED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml
+		INJECTED from /Users/mybook/workspace/ChishanManagerApp/imagepicker/src/main/AndroidManifest.xml

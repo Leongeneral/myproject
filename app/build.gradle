@@ -1,0 +1,44 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'com.jakewharton.butterknife'
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion '28.0.3'
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+    defaultConfig {
+        applicationId "com.auto.chishan.manager"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        //设置矢量图生成图片目录
+        vectorDrawables.generatedDensities = ['xhdpi']
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+//    统一所有library中V4版本
+    configurations.all {
+        resolutionStrategy.force "com.android.support:support-v4:28.0.0"
+        resolutionStrategy.force "com.android.support:support-compat:28.0.0"
+    }
+}
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation project(':commonlibrary')
+    annotationProcessor rootProject.ext.dependencies["butterknife-annotationProcessor"]
+    implementation rootProject.ext.dependencies["butterknife"]
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+//    implementation 'com.github.CodingEnding:PopupLayout:v1.0'
+}

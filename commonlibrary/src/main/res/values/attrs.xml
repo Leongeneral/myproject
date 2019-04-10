@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ProgressWheel 属性  -->
+    <declare-styleable name="ProgressWheel">
+        <attr name="matProg_progressIndeterminate" format="boolean" />
+        <attr name="matProg_barColor" format="color" />
+        <attr name="matProg_rimColor" format="color" />
+        <attr name="matProg_rimWidth" format="dimension" />
+        <attr name="matProg_spinSpeed" format="float" />
+        <attr name="matProg_barSpinCycleTime" format="integer" />
+        <attr name="matProg_circleRadius" format="dimension" />
+        <attr name="matProg_fillRadius" format="boolean" />
+        <attr name="matProg_barWidth" format="dimension" />
+        <attr name="matProg_linearProgress" format="boolean" />
+    </declare-styleable>
+
+    <!--圆ImageView-->
+    <declare-styleable name="RoundImageViewByXfermode">
+        <attr name="borderRadius" />
+        <attr name="type" />
+    </declare-styleable>
+    <attr name="borderRadius" format="dimension" />
+    <attr name="type">
+        <enum name="circle" value="0" />
+        <enum name="round" value="1" />
+    </attr>
+    <!--圆ImageView-->
+
+    <!--带角标的ImageView-->
+    <declare-styleable name="CornerImageView">
+        <attr name="cornerText" format="string" />
+        <attr name="cornerTextSize" format="dimension" />
+        <attr name="cornerTop" format="dimension" />
+        <attr name="cornerRight" format="dimension" />
+        <attr name="cornerRadius" format="dimension" />
+        <attr name="hiddenCorner" format="boolean" />
+        <attr name="hiddenCornerText" format="boolean" />
+        <attr name="cornerBackground" format="reference|color" />
+        <attr name="cornerLoadColor" format="reference" />
+        <attr name="cornerTextColor" format="reference" />
+    </declare-styleable>
+    <!--带角标的ImageView-->
+</resources>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:paddingBottom="10dp"
+              android:layout_height="wrap_content">
+
+    <TextView
+            android:id="@+id/customerNameTv"
+            style="@style/style_tv_16_black"
+            android:text="项目编号:129387iuhwioeho"
+            android:layout_margin="10dp"
+            />
+
+    <include
+        layout="@layout/view_horizontalline"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv1"
+            style="@style/style_tv_14_gray"
+            android:text="客户名称"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            />
+
+        <TextView
+            style="@style/style_tv_14_black"
+            android:text="王龙飞"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/tv1"
+            android:layout_marginRight="10dp"
+            />
+        <TextView
+            android:id="@+id/tv2"
+            style="@style/style_tv_14_gray"
+            android:text="项目名称"
+            android:layout_below="@id/tv1"
+            android:layout_marginLeft="10dp"
+            />
+        <TextView
+            style="@style/style_tv_14_black"
+            android:text="kljaf项目"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/tv2"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:id="@+id/tv3"
+            style="@style/style_tv_14_gray"
+            android:text="产品类型"
+            android:layout_below="@id/tv2"
+            android:layout_marginLeft="10dp"
+            />
+        <TextView
+            style="@style/style_tv_14_black"
+            android:text="典当"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/tv3"
+            android:layout_marginRight="10dp"
+            />
+
+        <!--到期的-->
+        <TextView
+            android:id="@+id/tv4"
+            style="@style/style_tv_14_gray"
+            android:text="合同到期日期"
+            android:layout_below="@id/tv3"
+            android:layout_marginLeft="10dp"
+            />
+        <TextView
+            android:id="@+id/contractExpiryDateTv"
+            style="@style/style_tv_14_black"
+            android:text="2019-03-13"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/tv4"
+            android:layout_marginRight="10dp"
+            />
+        <!--逾期的-->
+
+        <TextView
+            android:id="@+id/tv5"
+            style="@style/style_tv_14_gray"
+            android:text="逾期类型"
+            android:layout_below="@id/tv4"
+            android:layout_marginLeft="10dp"
+            />
+        <TextView
+            android:id="@+id/overdueTypeTv"
+            style="@style/style_tv_14_black"
+            android:text="本息逾期"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/tv5"
+            android:layout_marginRight="10dp"
+            />
+        <TextView
+            android:id="@+id/tv6"
+            style="@style/style_tv_14_gray"
+            android:text="逾期天数"
+            android:layout_below="@id/tv5"
+            android:layout_marginLeft="10dp"
+            />
+        <TextView
+            android:id="@+id/overdueDayNumTv"
+            style="@style/style_tv_14_black"
+            android:text="30天"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/tv6"
+            android:layout_marginRight="10dp"
+            />
+    </RelativeLayout>
+</LinearLayout>
