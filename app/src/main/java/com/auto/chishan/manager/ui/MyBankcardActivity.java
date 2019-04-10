@@ -2,24 +2,17 @@ package com.auto.chishan.manager.ui;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.auto.chishan.manager.R;
 import com.auto.chishan.manager.adapter.BankCardAdapter;
-import com.auto.chishan.manager.adapter.VisitRecordListAdapter;
 import com.auto.chishan.manager.bean.BankCardBean;
-import com.auto.chishan.manager.bean.ProjectManagerReviewBean;
-import com.auto.chishan.manager.bean.ReviewMgrMaintainBean;
-import com.auto.chishan.manager.bean.ReviewMgrMaintainListBean;
-import com.auto.chishan.manager.ui.afterloan.VisitRecordDetailActivity;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.model.Response;
 import com.my.commonlibrary.Constant.Urls;
 import com.my.commonlibrary.base.BaseResultActivity;
-import com.my.commonlibrary.http.Utils.LzyResponse;
 import com.my.commonlibrary.http.callback.DialogCallback;
 import com.my.commonlibrary.utils.SPUtils;
 import com.my.commonlibrary.view.DivItemDecoration;
@@ -99,17 +92,9 @@ public class MyBankcardActivity extends BaseResultActivity {
     protected void initData() {
 
         beans = new ArrayList<>();
-        adapter = new BankCardAdapter(mActivity, beans, R.layout.item_base);
+        adapter = new BankCardAdapter(mActivity, beans, R.layout.item_my_installment);
         recyclerView.setAdapter(adapter);
-        adapter.setOnItemClickListener(new OnItemClickListener() {
-            @Override
-            public void onItemClick(View itemView, int viewType, int position) {
-                Intent intent = new Intent(mActivity, VisitRecordDetailActivity.class);
-                intent.putExtra("ReviewMgrMaintainBean",beans.get(position));
-//                intent.putExtra("id",beans.get(position).getId());
-                startActivityForResult(intent,1001);
-            }
-        });
+
 
     }
 

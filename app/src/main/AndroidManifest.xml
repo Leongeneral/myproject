@@ -33,59 +33,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.auto.chishan.manager.ui.customer.AddCustomerActivity"
-                  android:screenOrientation="portrait"/>
-        <activity android:name="com.auto.chishan.manager.ui.customer.ImageDataActivity"
-                  android:screenOrientation="portrait"/>
-        <activity android:name="com.auto.chishan.manager.ui.customer.UploadImageActivity"
-                  android:screenOrientation="portrait"/>
-        <activity android:name="com.auto.chishan.manager.ui.customer.CustomerListActivity"
-                  android:screenOrientation="portrait"/>
-        <activity android:name="com.auto.chishan.manager.ui.home.ExpirationReminderActivity"
-                  android:screenOrientation="portrait"/>
-        <activity android:name="com.auto.chishan.manager.ui.home.ProjectDetailExpireActivity"
-                  android:screenOrientation="portrait"/>
         <activity android:name="com.auto.chishan.manager.ui.MainActivity"
-                  android:screenOrientation="portrait"/>
-        <activity android:name="com.auto.chishan.manager.ui.project.ProjectManageActivity"
-                  android:screenOrientation="portrait"/>
-        <activity android:name="com.auto.chishan.manager.ui.project.ProjectDetailActivity"
-                  android:screenOrientation="portrait"/>
-        <activity android:name="com.auto.chishan.manager.ui.project.ContractManageActivity"
-                  android:screenOrientation="portrait"/>
-        <activity android:name="com.auto.chishan.manager.ui.project.ContractMaintainActivity"
-                  android:screenOrientation="portrait"/>
-        <activity android:name="com.auto.chishan.manager.ui.project.ContractLookActivity"
-                  android:screenOrientation="portrait"/>
-        <activity android:name="com.auto.chishan.manager.ui.project.AddContractActivity"
-                  android:screenOrientation="portrait"/>
-        <activity android:name="com.auto.chishan.manager.ui.project.UnderwriteManageActivity"
-                  android:screenOrientation="portrait"/>
-        <activity android:name="com.auto.chishan.manager.ui.project.UnderWriteMaintainActivity"
-                  android:screenOrientation="portrait"/>
-        <activity android:name="com.auto.chishan.manager.ui.project.UnderwriteLookActivity"
-                  android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"/>
 
-        <!--查看选中的图片-->
-        <activity
-            android:name="com.auto.chishan.manager.ui.customer.ImagePreviewDelActivity"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity android:name="com.auto.chishan.manager.ui.afterloan.AfterloanVisitActivity"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity android:name="com.auto.chishan.manager.ui.afterloan.VisitRecordListActivity"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity android:name="com.auto.chishan.manager.ui.afterloan.VisitAddRecordActivity"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity android:name="com.auto.chishan.manager.ui.afterloan.VisitRecordDetailActivity"
-            android:label="回访详情"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity android:name="com.auto.chishan.manager.ui.project.FindUserActivity"
-            ></activity>
         <activity android:name="com.auto.chishan.manager.ui.SettingActivity"
             android:label="设置"
             android:screenOrientation="portrait"/>

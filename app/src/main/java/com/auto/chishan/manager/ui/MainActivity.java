@@ -2,7 +2,6 @@ package com.auto.chishan.manager.ui;
 
 import android.content.Intent;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TextView;

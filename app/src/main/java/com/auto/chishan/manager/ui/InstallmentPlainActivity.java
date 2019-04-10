@@ -1,6 +1,5 @@
 package com.auto.chishan.manager.ui;
 
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -8,10 +7,7 @@ import android.view.View;
 
 import com.auto.chishan.manager.R;
 import com.auto.chishan.manager.adapter.InstallmentPlainAdapter;
-import com.auto.chishan.manager.adapter.MyInstallmentAdapter;
-import com.auto.chishan.manager.bean.InstallmentBean;
 import com.auto.chishan.manager.bean.InstallmentPlainBean;
-import com.auto.chishan.manager.ui.afterloan.VisitRecordDetailActivity;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.lzy.okgo.OkGo;
@@ -26,7 +22,6 @@ import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 
-import org.byteam.superadapter.OnItemClickListener;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;

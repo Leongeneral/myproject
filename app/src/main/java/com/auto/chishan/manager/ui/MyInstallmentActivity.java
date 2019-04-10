@@ -9,7 +9,6 @@ import android.view.View;
 import com.auto.chishan.manager.R;
 import com.auto.chishan.manager.adapter.MyInstallmentAdapter;
 import com.auto.chishan.manager.bean.InstallmentBean;
-import com.auto.chishan.manager.ui.afterloan.VisitRecordDetailActivity;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.model.Response;
 import com.my.commonlibrary.Constant.Urls;
@@ -90,15 +89,7 @@ public class MyInstallmentActivity extends BaseResultActivity {
         beans = new ArrayList<>();
         adapter = new MyInstallmentAdapter(mActivity, beans, R.layout.item_my_installment);
         recyclerView.setAdapter(adapter);
-        adapter.setOnItemClickListener(new OnItemClickListener() {
-            @Override
-            public void onItemClick(View itemView, int viewType, int position) {
-                Intent intent = new Intent(mActivity, VisitRecordDetailActivity.class);
-                intent.putExtra("ReviewMgrMaintainBean",beans.get(position));
-//                intent.putExtra("id",beans.get(position).getId());
-                startActivityForResult(intent,1001);
-            }
-        });
+
 
     }
 

@@ -1,27 +1,17 @@
 package com.auto.chishan.manager.adapter;
 
 import android.app.Activity;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.View;
 
 import com.auto.chishan.manager.R;
 import com.auto.chishan.manager.bean.InstallmentBean;
-import com.auto.chishan.manager.bean.ReviewMgrMaintainBean;
 import com.auto.chishan.manager.ui.InstallmentPlainActivity;
-import com.lzy.okgo.OkGo;
-import com.lzy.okgo.model.Response;
-import com.my.commonlibrary.Constant.Urls;
-import com.my.commonlibrary.http.Utils.LzyResponse;
-import com.my.commonlibrary.http.callback.DialogCallback;
-import com.my.commonlibrary.utils.DialogUtils2;
-import com.my.commonlibrary.utils.RSAandDES;
-import com.my.commonlibrary.utils.SPUtils;
+
 
 import org.byteam.superadapter.SuperAdapter;
 import org.byteam.superadapter.SuperViewHolder;
-import org.json.JSONException;
-import org.json.JSONObject;
+
 
 import java.util.List;
 

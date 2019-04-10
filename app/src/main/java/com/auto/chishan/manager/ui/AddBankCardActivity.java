@@ -1,12 +1,10 @@
 package com.auto.chishan.manager.ui;
 
-import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 import com.auto.chishan.manager.R;
-import com.auto.chishan.manager.bean.ContractBean;
 import com.my.commonlibrary.adapter.SelectAdapter;
 import com.my.commonlibrary.base.BaseResultActivity;
 import com.my.commonlibrary.bean.SelectBean;
@@ -42,7 +40,6 @@ public class AddBankCardActivity extends BaseResultActivity {
 
 
     private boolean isChange;
-    private ContractBean contractBean;
     @Override
     protected int setLayout() {
         return R.layout.activity_add_bank_card;
@@ -65,9 +62,7 @@ public class AddBankCardActivity extends BaseResultActivity {
 
     @Override
     protected void initData() {
-        contractBean = getIntent().getParcelableExtra("bean");
 
-            contractBean = new ContractBean();
 
         View typeView = View.inflate(mActivity, R.layout.include_onlyrv, null);
         selectBeans = new ArrayList<>();
@@ -105,16 +100,7 @@ public class AddBankCardActivity extends BaseResultActivity {
     public void onViewClicked(View v) {
         switch (v.getId()){
             case R.id.saveBtn:
-            case R.id.title_right:
-//                contractBean.setContractName(contractNameEt.getText().toString().trim());
-//                contractBean.setContractNo(contractNoEt.getText().toString().trim());
-//                contractBean.setContractNum(contractNumEt.getText().toString().trim());
-//                contractBean.setContractTxt(contractTxtEt.getText().toString().trim());
-                Intent intent = new Intent();
-                intent.putExtra("bean", contractBean);
-                setResult(1001,intent);
-                finish();
-                break;
+
             case R.id.select_bank:
                 selectType = 1;
                 getContractType();
