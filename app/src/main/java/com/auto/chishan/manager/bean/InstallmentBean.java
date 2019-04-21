@@ -142,6 +142,16 @@ public class InstallmentBean implements Parcelable {
     private String number;
     private String amount;
 
+    public String getJson() {
+        return json;
+    }
+
+    public void setJson(String json) {
+        this.json = json;
+    }
+
+    private String json;
+
     public InstallmentBean(){
 
     }
@@ -152,6 +162,7 @@ public class InstallmentBean implements Parcelable {
         number = in.readString();
         community=in.readString();
         id=in.readString();
+        json=in.readString();
     }
 
     @Override
@@ -160,6 +171,7 @@ public class InstallmentBean implements Parcelable {
         dest.writeString(number);
         dest.writeString(community);
         dest.writeString(id);
+        dest.writeString(json);
 
     }
 

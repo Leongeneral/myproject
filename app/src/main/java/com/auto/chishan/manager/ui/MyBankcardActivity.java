@@ -1,14 +1,18 @@
 package com.auto.chishan.manager.ui;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 
 import com.auto.chishan.manager.R;
 import com.auto.chishan.manager.adapter.BankCardAdapter;
 import com.auto.chishan.manager.bean.BankCardBean;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.model.Response;
 import com.my.commonlibrary.Constant.Urls;
@@ -21,7 +25,9 @@ import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 
-import org.byteam.superadapter.OnItemClickListener;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -74,7 +80,7 @@ public class MyBankcardActivity extends BaseResultActivity {
                 getData();
             }
         });
-        smartRefreshView.autoRefresh();
+
         showNormal();
         recyclerView.setLayoutManager(new LinearLayoutManager(mActivity));
         recyclerView.addItemDecoration(new DivItemDecoration(30, false));
@@ -92,7 +98,13 @@ public class MyBankcardActivity extends BaseResultActivity {
     protected void initData() {
 
         beans = new ArrayList<>();
-        adapter = new BankCardAdapter(mActivity, beans, R.layout.item_my_installment);
+        adapter = new BankCardAdapter(mActivity, beans, R.layout.item_my_bank_card);
+        adapter.setNotifyData(new BankCardAdapter.NotifyData() {
+            @Override
+            public void notifyData() {
+                getData();
+            }
+        });
         recyclerView.setAdapter(adapter);
 
 
@@ -109,6 +121,20 @@ public class MyBankcardActivity extends BaseResultActivity {
                             beans.clear();
                         }
                         if (response.body() != null) {
+                            Log.e("****",response.body());
+                            try {
+                                JSONObject json = new JSONObject(response.body());
+                                if(json.getInt("code") == 1){
+                                    JSONArray array = json.optJSONArray("data");
+                                    for (int i=0; i<array.length(); i++){
+                                        JSONObject js = array.optJSONObject(i);
+                                        Gson gson  = new GsonBuilder().create();
+                                        BankCardBean bean = gson.fromJson(js.toString(),BankCardBean.class);
+                                        beans.add(bean);
+                                    }
+                                }
+
+                            }catch (Exception e){}
 //                            beans.addAll(response.body().getAuto_data().getMgrList());
                         }
                         adapter.notifyDataSetChanged();
@@ -123,5 +149,11 @@ public class MyBankcardActivity extends BaseResultActivity {
                         smartRefreshView.finishLoadMore();
                     }
                 });
+    }
+
+    @Override
+    protected void onResume() {
+        smartRefreshView.autoRefresh();
+        super.onResume();
     }
 }

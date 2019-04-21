@@ -25,6 +25,16 @@ public class Urls {
     public static String MYBANKCARD = "myBankCards?";
 
     public static String PROJECTPLAN="projectPlan";
+
+
+    public static String PAY = "pay";
+
+    public static String APPLY = "/weijinrong-web/app/quickpay/apply?";
+
+    public static String SIGNCONFIRM = "/weijinrong-web/app/quickpay/signConfirm?";
+
+    public static String UNBINDBANKCARD = "/weijinrong-web/app/quickpay/deleteCard?";
+
     /** 客户经理关联的客户列表 */
     public static String managerCustomerList = "managerCustomerList";
     /** 客户详情页面 */

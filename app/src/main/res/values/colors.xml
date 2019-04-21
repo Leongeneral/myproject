@@ -23,4 +23,11 @@
 
     <color name="font_hyperlink">#4a6489</color>
 
+
+    <!--蓝色字体-->
+    <color name="font_blue">#6498ff</color>
+
+
+    <color name="login_showtxt">#afafaf</color>
+
 </resources>

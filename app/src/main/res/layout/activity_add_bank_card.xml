@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:paddingBottom="30dp"
               android:orientation="vertical">
@@ -89,22 +90,23 @@
             android:textColor="@color/black"
             android:textSize="15sp"/>
     </LinearLayout>
+
     <RelativeLayout
-        android:id="@+id/select_bank"
+        android:id="@+id/select_bank_kind"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@color/white">
 
         <TextView
-            android:id="@+id/tv1"
+            android:id="@+id/tv1_kind"
             style="@style/style_tv_15_black"
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
-            android:text="*开户行："
+            android:text="*卡类型："
             />
 
         <ImageView
-            android:id="@+id/iv1"
+            android:id="@+id/iv1_kind"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -113,18 +115,75 @@
             android:background="@mipmap/arrow"/>
 
         <TextView
-            android:id="@+id/contractTypeTv"
+            android:id="@+id/contractTypeTv_kind"
             style="@style/style_tv_15_gray"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginRight="10dp"
             android:layout_marginLeft="20dp"
-            android:layout_toRightOf="@id/tv1"
+            android:layout_toRightOf="@id/tv1_kind"
             android:gravity="left"
-            android:hint="选择开户行"
-            />
+            android:hint="选择卡类型" />
     </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_cvv2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="20dp">
+
+        <TextView
+            style="@style/style_tv_15_black"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="*卡片安全码："/>
+
+        <EditText
+            android:id="@+id/bank_cvv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@null"
+            android:gravity="center_vertical|left"
+            android:hint="输入卡片安全码"
+            android:textColor="@color/black"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_validdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="20dp">
+
+        <TextView
+            style="@style/style_tv_15_black"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="*卡片有效期："/>
+
+        <EditText
+            android:id="@+id/bank_validdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@null"
+            android:gravity="center_vertical|left"
+            android:hint="输入卡片有效期"
+            android:textColor="@color/black"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
 
 
     <LinearLayout
@@ -187,9 +246,9 @@
             android:id="@+id/get_verify_code"
             android:layout_width="0dp"
             android:layout_height="40dp"
-            android:layout_weight="1"
+            android:layout_weight="1.5"
             android:gravity="center"
-            android:enabled="false"
+            android:enabled="true"
             android:text="获取"
             android:background="@drawable/verify_code_bg"
             android:textColor="@color/color_primary_white"

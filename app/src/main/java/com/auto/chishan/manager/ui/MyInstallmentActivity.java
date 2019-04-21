@@ -113,6 +113,7 @@ public class MyInstallmentActivity extends BaseResultActivity {
                                 for(int i =0; i<array.length();i++){
                                     InstallmentBean bean = new InstallmentBean();
                                     JSONObject js = array.getJSONObject(i);
+                                    bean.setJson(js.toString());
                                     bean.setId(js.getString("id"));
                                     JSONObject js1 = js.getJSONObject("estates");
 

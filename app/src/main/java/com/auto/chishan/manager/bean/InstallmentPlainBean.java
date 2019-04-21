@@ -34,7 +34,7 @@ public class InstallmentPlainBean  {
 
     private String payDate;
 
-    private String payPrincipal;
+    private String payPrincipal;//本金
 
     private String payInterest;
 

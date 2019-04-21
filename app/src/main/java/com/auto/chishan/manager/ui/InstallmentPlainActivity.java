@@ -3,6 +3,7 @@ package com.auto.chishan.manager.ui;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 
 import com.auto.chishan.manager.R;
@@ -116,6 +117,7 @@ public class InstallmentPlainActivity extends BaseResultActivity {
                             beans.clear();
                         }
                         String result = response.body();
+                        Log.e("***",result);
                         try {
                             JSONObject json = new JSONObject(result);
 

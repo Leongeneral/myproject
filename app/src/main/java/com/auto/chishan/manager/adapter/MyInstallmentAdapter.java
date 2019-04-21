@@ -7,6 +7,7 @@ import android.view.View;
 import com.auto.chishan.manager.R;
 import com.auto.chishan.manager.bean.InstallmentBean;
 import com.auto.chishan.manager.ui.InstallmentPlainActivity;
+import com.auto.chishan.manager.ui.RefoundActivity;
 
 
 import org.byteam.superadapter.SuperAdapter;
@@ -49,6 +50,10 @@ public class MyInstallmentAdapter extends SuperAdapter<InstallmentBean> {
         holder.setOnClickListener(R.id.refund, new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(mContext,RefoundActivity.class);
+                intent.putExtra("projectId",item.getId());
+                intent.putExtra("json",item.getJson());
+                mContext.startActivity(intent);
 
             }
         });

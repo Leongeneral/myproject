@@ -2,8 +2,15 @@
     <string name="app_name">凤凰湖</string>
     <string name="bottom_bervaior">cn.white.ymc.wanandroidmaster.util.behavior.BottomNavigationBehavior</string>
 
-    <string-array name="busyType">
-        <item>典当</item>
-        <item>担保</item>
+
+
+    <string-array name="bank_card_kind_select">
+        <item>借记卡</item>
+        <item>准贷记卡/贷记卡</item>
     </string-array>
+
+    <string name="net_unavailable">当前网络不可用，请检查网络设置</string>
+
+    <string name="register_vercode_des">获取验证码</string>
+    <string name="get_verifycode_again">重发</string>
 </resources>
