@@ -2,6 +2,7 @@ package com.auto.chishan.manager.ui;
 
 
 import android.view.View;
+import android.widget.Toast;
 
 import com.auto.chishan.manager.R;
 import com.lzy.okgo.OkGo;
@@ -39,7 +40,8 @@ public class SettingActivity extends BaseActivity {
                 finish();
                 break;
             case R.id.rl_version:
-                getVersion();
+//                getVersion();
+                Toast.makeText(this,"暂未开发",Toast.LENGTH_SHORT).show();
                 break;
         }
     }

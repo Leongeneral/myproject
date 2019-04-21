@@ -8,24 +8,60 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:background="@color/color_accent">
-            <com.auto.chishan.manager.view.CircleImageView
-                android:id="@+id/user_header_circle"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+            <!--<com.auto.chishan.manager.view.CircleImageView-->
+                <!--android:id="@+id/user_header_circle"-->
+                <!--android:layout_width="70dp"-->
+                <!--android:layout_height="70dp"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginLeft="40dp"-->
+                <!--android:src="@mipmap/loading"-->
+                <!--app:border_width="0dp" />-->
+
+            <RelativeLayout
+                android:id="@+id/user_head_layout"
+                android:layout_width="59dp"
+                android:layout_height="59dp"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="40dp"
-                android:src="@mipmap/loading"
-                app:border_width="0dp" />
+                android:contentDescription="点击更换用户头像">
+
+                <com.auto.chishan.manager.view.CircleImageView
+                    android:id="@+id/user_head_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_user_default_head"
+                    app:border_width="0dp" />
+
+                <com.auto.chishan.manager.view.CircleImageView
+                    android:id="@+id/user_waiting_circle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/loading"
+                    android:visibility="gone"
+                    app:border_width="0dp" />
+
+                <!--<com.auto.chishan.manager.view.CircleImageView-->
+                    <!--android:id="@+id/user_head_image_border"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:background="@drawable/ic_normal_user_h"-->
+                    <!--app:border_color="@color/header_border"-->
+                    <!--app:border_width="0dp" />-->
+
+            </RelativeLayout>
             <TextView
                 android:id="@+id/user_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="刘禹锡"
-                android:layout_toRightOf="@id/user_header_circle"
+                android:text=""
+                android:layout_toRightOf="@id/user_head_layout"
                 android:textColor="@color/color_primary_white"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="30dp"
@@ -40,7 +76,7 @@
                 android:layout_marginTop="0dp"
                 android:layout_marginRight="0dp"
                 android:padding="15dp"
-                android:src="@mipmap/arrow" />
+                android:src="@drawable/ic_setting" />
 
 
         </RelativeLayout>

@@ -27,26 +27,35 @@ public class InstallmentPlainAdapter extends SuperAdapter<InstallmentPlainBean> 
     @Override
     public void onBind(SuperViewHolder holder, int viewType, int layoutPosition, final InstallmentPlainBean item) {
 
-//        holder.setText(R.id.money,"¥"+item.getAmount());
-//        holder.setText(R.id.house,item.getCommunity() +"    "+item.getNumber());
+        holder.setText(R.id.phase,item.getBatchPaymentPeriods());
+        holder.setText(R.id.date,item.getPayDate());
+
+        holder.setText(R.id.principal,item.getPayPrincipal());
+
+        holder.setText(R.id.interest,item.getPayInterest());
+
+        holder.setText(R.id.total,Float.parseFloat(item.getPayPrincipal()) + Float.parseFloat(item.getPayInterest())+"" );
 
 
+        String status = item.getRepaymentState();
+        if("0".equals(status)){
+            holder.setText(R.id.status,"待还");
+        }else if("1".equals(status)){
+            holder.setText(R.id.status,"已还");
+        }else{
+            holder.setText(R.id.status,"逾期");
 
-
-        holder.setOnClickListener(R.id.plain, new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
-        holder.setOnClickListener(R.id.refund, new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
+        }
     }
+
+
+
+
+
+
+
+
+
 
 
 }

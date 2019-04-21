@@ -24,13 +24,16 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppBaseTheme">
+        <activity android:name=".ui.ChishanWelcom">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN"/>
+
+            <category android:name="android.intent.category.LAUNCHER"/>
+        </intent-filter>
+        </activity>
         <activity android:name="com.auto.chishan.manager.ui.LoginActivity"
                   android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
 
         <activity android:name="com.auto.chishan.manager.ui.MainActivity"

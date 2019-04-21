@@ -43,8 +43,8 @@ public class InstallmentPlainActivity extends BaseResultActivity {
 
     @BindView(R.id.recyclerView)
     RecyclerView recyclerView;
-    @BindView(R.id.smartRefresh_view)
-    SmartRefreshLayout smartRefreshView;
+//    @BindView(R.id.smartRefresh_view)
+//    SmartRefreshLayout smartRefreshView;
 
 
     private InstallmentPlainAdapter adapter;
@@ -56,7 +56,7 @@ public class InstallmentPlainActivity extends BaseResultActivity {
 
     @Override
     protected int setLayout() {
-        return R.layout.activity_my_installment;
+        return R.layout.activity_my_installment_plan;
     }
 
     @Override
@@ -67,21 +67,24 @@ public class InstallmentPlainActivity extends BaseResultActivity {
 
         projectId = getIntent().getStringExtra("projectId");
 
-        smartRefreshView.setOnRefreshListener(new OnRefreshListener() {
-            @Override
-            public void onRefresh(@NonNull RefreshLayout refreshLayout) {
-                pageNo = 1;
+//        smartRefreshView.setOnRefreshListener(new OnRefreshListener() {
+//            @Override
+//            public void onRefresh(@NonNull RefreshLayout refreshLayout) {
+//                pageNo = 1;
                 getData();
-            }
-        });
-        smartRefreshView.setOnLoadMoreListener(new OnLoadMoreListener() {
-            @Override
-            public void onLoadMore(@NonNull RefreshLayout refreshLayout) {
-                pageNo++;
-                getData();
-            }
-        });
-        smartRefreshView.autoRefresh();
+//            }
+//        });
+//        smartRefreshView.setOnLoadMoreListener(null);
+
+//        smartRefreshView.setOnLoadMoreListener(new OnLoadMoreListener() {
+//            @Override
+//            public void onLoadMore(@NonNull RefreshLayout refreshLayout) {
+////                pageNo++;
+//                getData();
+//            }
+//        });
+//        smartRefreshView.autoRefresh();
+
         showNormal();
         recyclerView.setLayoutManager(new LinearLayoutManager(mActivity));
         recyclerView.addItemDecoration(new DivItemDecoration(30, false));
@@ -92,7 +95,7 @@ public class InstallmentPlainActivity extends BaseResultActivity {
     protected void initData() {
 
         beans = new ArrayList<>();
-        adapter = new InstallmentPlainAdapter(mActivity, beans, R.layout.item_my_installment);
+        adapter = new InstallmentPlainAdapter(mActivity, beans, R.layout.item_my_installment_plan);
         recyclerView.setAdapter(adapter);
 //        adapter.setOnItemClickListener(new OnItemClickListener() {
 //            @Override
@@ -137,15 +140,16 @@ public class InstallmentPlainActivity extends BaseResultActivity {
                         }
 
                         adapter.notifyDataSetChanged();
-                        smartRefreshView.finishRefresh();
-                        smartRefreshView.finishLoadMore();
+//                        smartRefreshView.finishRefresh();
+//                        smartRefreshView.finishLoadMore();
+//                        smartRefreshView.setEnableRefresh(false);
                     }
 
                     @Override
                     public void onError(Response<String> response) {
                         super.onError(response);
-                        smartRefreshView.finishRefresh();
-                        smartRefreshView.finishLoadMore();
+//                        smartRefreshView.finishRefresh();
+//                        smartRefreshView.finishLoadMore();
                     }
                 });
     }

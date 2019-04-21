@@ -76,7 +76,7 @@ public class MyBankcardActivity extends BaseResultActivity {
         smartRefreshView.setOnLoadMoreListener(new OnLoadMoreListener() {
             @Override
             public void onLoadMore(@NonNull RefreshLayout refreshLayout) {
-                pageNo++;
+//                pageNo++;
                 getData();
             }
         });
