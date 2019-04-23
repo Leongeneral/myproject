@@ -1,6 +1,7 @@
 package com.auto.chishan.manager.ui;
 
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.Toast;
 
@@ -32,7 +33,7 @@ public class SettingActivity extends BaseActivity {
 
     }
 
-    @OnClick({R.id.rl_version,R.id.login_out})
+    @OnClick({R.id.rl_version,R.id.login_out,R.id.modify_pwd})
     public void onViewClick(View v){
         switch (v.getId()){
             case R.id.login_out:
@@ -42,6 +43,10 @@ public class SettingActivity extends BaseActivity {
             case R.id.rl_version:
 //                getVersion();
                 Toast.makeText(this,"暂未开发",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.modify_pwd:
+                Intent intent = new Intent(SettingActivity.this,ModifyPwdActivity.class);
+                startActivity(intent);
                 break;
         }
     }

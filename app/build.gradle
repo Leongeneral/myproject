@@ -35,10 +35,11 @@ repositories {
 }
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+//    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     implementation project(':commonlibrary')
     annotationProcessor rootProject.ext.dependencies["butterknife-annotationProcessor"]
     implementation rootProject.ext.dependencies["butterknife"]
     implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+//    implementation 'com.afollestad.material-dialogs:core:0.9.4.6'
 //    implementation 'com.github.CodingEnding:PopupLayout:v1.0'
 }

@@ -6,6 +6,7 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.view.KeyEvent;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -15,7 +16,6 @@ import com.auto.chishan.manager.R;
 import com.github.dfqin.grantor.PermissionListener;
 import com.github.dfqin.grantor.PermissionsUtil;
 import com.lzy.okgo.OkGo;
-import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.Response;
 import com.my.commonlibrary.Constant.Urls;
 import com.my.commonlibrary.base.BaseResultActivity;
@@ -28,12 +28,7 @@ import com.my.commonlibrary.utils.SPUtils;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-/**
- * Date: 2018/12/17
- * desc:
- *
- * @author:DingZhixiang
- */
+
 public class LoginActivity extends BaseResultActivity {
     @BindView(R.id.UI_login_nameEdit)
     EditText UILoginNameEdit;
@@ -81,11 +76,18 @@ public class LoginActivity extends BaseResultActivity {
         }, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, true, tip);
     }
 
-    @OnClick(R.id.saveBtn)
-    public void onViewClicked() {
-        initHttpLogin(UILoginNameEdit.getText().toString().trim(), UILoginKayEdit.getText()
-                .toString()
-                .trim());
+    @OnClick({R.id.saveBtn,R.id.forget})
+    public void onViewClicked(View v) {
+        switch (v.getId()){
+            case R.id.saveBtn:
+                initHttpLogin(UILoginNameEdit.getText().toString().trim(), UILoginKayEdit.getText()
+                        .toString()
+                        .trim());
+                break;
+            case R.id.forget:
+                break;
+        }
+
     }
 
     private void initHttpLogin(final String name, final String key) {

@@ -2,23 +2,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/white"
-                android:fitsSystemWindows="true"
-                android:paddingLeft="14dp"
-                android:paddingRight="15dp"
-                android:paddingTop="30dp">
+                >
 
-
+    <include
+        layout="@layout/titlebar"/>
     <LinearLayout
         android:id="@+id/login_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
         android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:src="@mipmap/login_top"/>
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -27,20 +22,22 @@
             android:background="@drawable/edit_gray"
             android:orientation="horizontal">
 
-            <ImageView
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:src="@mipmap/login_name"/>
+                android:text="旧密码"
+                android:textColor="@color/font_semi"
+                android:textSize="15sp"
+                android:paddingRight="10dp"/>
 
             <EditText
-                android:id="@+id/UI_login_nameEdit"
+                android:id="@+id/old_pwd"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@android:color/transparent"
-                android:hint="请输入登录账号"
+                android:hint="请输入旧密码"
                 android:maxLines="1"
                 android:paddingRight="10dp"
                 android:textSize="14sp"/>
@@ -54,20 +51,52 @@
             android:background="@drawable/edit_gray"
             android:orientation="horizontal">
 
-            <ImageView
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:src="@mipmap/login_key"/>
+                android:text="新密码"
+                android:textColor="@color/font_semi"
+                android:textSize="15sp"
+                android:paddingRight="10dp"/>
 
             <EditText
-                android:id="@+id/UI_login_kayEdit"
+                android:id="@+id/new_pwd"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@android:color/transparent"
-                android:hint="请输入登录密码"
+                android:hint="输入新密码"
+                android:inputType="textPassword"
+                android:paddingRight="10dp"
+                android:maxLines="1"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/edit_gray"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="新密码"
+                android:textColor="@color/font_semi"
+                android:textSize="15sp"
+                android:paddingRight="10dp"/>
+
+            <EditText
+                android:id="@+id/new_pwd_sure"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:hint="再次输入新密码"
                 android:inputType="textPassword"
                 android:paddingRight="10dp"
                 android:maxLines="1"
@@ -77,28 +106,6 @@
         <include layout="@layout/include_savebtn"/>
 
     </LinearLayout>
-    <TextView
-        android:id="@+id/versionTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingBottom="10dp"
-        android:paddingTop="10dp"
-        android:textColor="@color/gray"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
-        android:textSize="12sp"/>
 
-    <TextView
-        android:id="@+id/forget"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="忘记密码"
-        android:textSize="15sp"
-        android:textColor="#929292"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="35dp"
-        android:padding="10dp"
-        android:layout_below="@id/login_view"/>
 
 </RelativeLayout>

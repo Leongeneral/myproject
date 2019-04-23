@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white">
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="暂无消息"
+        android:textSize="14sp"
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/font_semi"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/time"
+        android:textSize="14sp"
+        android:layout_alignParentRight="true"
+        android:paddingRight="8dp"
+        android:layout_below="@id/content"
+        android:textColor="@color/font_hyperlink"/>
+
+</RelativeLayout>
